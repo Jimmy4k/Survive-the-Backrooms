@@ -1,3 +1,7 @@
+
+Datein mit der Cloud synchronisieren
+git pull
+
 Auf Geänderte Dateien prüfen
 git status
 
