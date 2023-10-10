@@ -1,0 +1,10 @@
+Auf Geänderte Dateien prüfen
+git status
+
+Alle Änderungen Adden:
+git add *
+
+Commit erstellen mit Message
+git commit -m "Ich bin eine Bockwurst"
+
+git push
