@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class flickerLight : MonoBehaviour {
 
-	public Light theLight;
-	//public GameObject lightObject;
+    public Light theLight;
+    public Light theLight2;
+    public GameObject lightObject;
 
 	[SerializeField]
 	float minTimeBeforeLightFlickers;
@@ -22,8 +23,13 @@ public class flickerLight : MonoBehaviour {
 		while (true)
 		{
 			yield return new WaitForSeconds(Random.Range(minTimeBeforeLightFlickers, maxTimeBeforeLightFlicker));
-			theLight.enabled = !theLight.enabled;
-			//lightObject.SetActive(theLight.enabled);
-		}
+            theLight.enabled = !theLight.enabled;
+            lightObject.SetActive(theLight.enabled);
+
+			if (theLight2 != null ) {
+                theLight2.enabled = !theLight2.enabled;
+                lightObject.SetActive(theLight2.enabled);
+            }
+        }
 	} 
 }
