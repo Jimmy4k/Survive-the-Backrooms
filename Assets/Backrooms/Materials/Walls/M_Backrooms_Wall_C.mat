@@ -61,7 +61,6 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AlphaCutoff: 0.5
     - _Brightness: 2
     - _Contrast: 0.8
     - _Desaturation: 0.3
