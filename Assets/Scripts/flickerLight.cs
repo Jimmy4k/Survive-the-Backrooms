@@ -14,7 +14,7 @@ public class flickerLight : MonoBehaviour {
     public Material onMaterial;
     public Material offMaterial;
 
-    public bool isOn;
+    private bool isOn;
 
     [SerializeField]
 	float minTimeBeforeLightFlickers;
@@ -48,9 +48,6 @@ public class flickerLight : MonoBehaviour {
         foreach (GameObject light in lights)
         {
             {
-                
-                Renderer renderer = cube.GetComponent<Renderer>();
-                Material materials = renderer.material;
                 Light[] lightCompoment = light.GetComponentsInChildren<Light>();
                 foreach (Light lichter in lightCompoment)
                 {
@@ -68,8 +65,6 @@ public class flickerLight : MonoBehaviour {
         foreach (GameObject light in lights)
         {
             {
-                Renderer renderer = cube.GetComponent<Renderer>();
-                Material materials = renderer.material;
                 Light[] lightCompoment = light.GetComponentsInChildren<Light>();
 
                 foreach (Light lichter in lightCompoment)
